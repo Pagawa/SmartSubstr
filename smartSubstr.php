@@ -10,35 +10,35 @@
 
 function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
 {
-	if (mb_strlen($str) <= $maxLength) {
-		return $str;
-	}
+    if (mb_strlen($str) <= $maxLength) {
+        return $str;
+    }
 
-	$returnStr = '';
-	$totalLength = 0;
-	$separatorLength = mb_strlen($separator);
-	$explodeStr = explode($separator, $str);
+    $returnStr = '';
+    $totalLength = 0;
+    $separatorLength = mb_strlen($separator);
+    $explodeStr = explode($separator, $str);
 
-	if (count($explodeStr) > 1) {
-		foreach($explodeStr as $item) {
+    if (count($explodeStr) > 1) {
+        foreach($explodeStr as $item) {
 
-			$itemLength = mb_strlen($item . $separator);
-			$totalLength += $itemLength;
+            $itemLength = mb_strlen($item . $separator);
+            $totalLength += $itemLength;
 
-			if ($totalLength >= $maxLength) {
-				if (substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
-					$returnStr = substr($returnStr, 0, -$separatorLength);
-				}
+            if ($totalLength >= $maxLength) {
+                if (substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
+                    $returnStr = substr($returnStr, 0, -$separatorLength);
+                }
 
-				$returnStr = trim($returnStr) . $tail;
-				break;
-			}
+                $returnStr = trim($returnStr) . $tail;
+                break;
+            }
 
-			$returnStr .= $item . $separator;
-		}
-	} else {
-		return mb_substr($str, 0, $maxLength);
-	}
+            $returnStr .= $item . $separator;
+        }
+    } else {
+        return mb_substr($str, 0, $maxLength);
+    }
 
-	return $returnStr;
+    return $returnStr;
 }
