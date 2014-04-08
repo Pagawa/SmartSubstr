@@ -8,8 +8,8 @@
  * Released under the MIT license - http://opensource.org/licenses/MIT
  */
 
-function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...') {
-
+function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
+{
 	if (mb_strlen($str) <= $maxLength) {
 		return $str;
 	}
