@@ -22,15 +22,15 @@ function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
     if (count($explodeStr) > 1) {
         foreach($explodeStr as $item) {
 
-            $itemLength = mb_strlen($item . $separator);
-            $totalLength += $itemLength;
+            $itemLength = mb_strlen($item);
+            $totalLength = mb_strlen($returnStr);
 
-            if ($totalLength >= $maxLength) {
+            if (($totalLength + $itemLength) >= $maxLength) {
                 if (substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
                     $returnStr = substr($returnStr, 0, -$separatorLength);
                 }
 
-                $returnStr = $returnStr . $tail;
+                $returnStr .= $tail;
                 break;
             }
 
