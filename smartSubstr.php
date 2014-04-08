@@ -30,7 +30,7 @@ function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
                     $returnStr = substr($returnStr, 0, -$separatorLength);
                 }
 
-                $returnStr = trim($returnStr) . $tail;
+                $returnStr = $returnStr . $tail;
                 break;
             }
 
