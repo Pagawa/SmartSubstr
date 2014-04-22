@@ -36,11 +36,10 @@ echo smartSubstr($example, 45) . '...';
 This above example will output :
 
 ```php
-Lorem ipsum dolor sit amet, consectetur adipi
+Lorem ipsum dolor sit amet, consectetur adipi...
 
 Lorem ipsum dolor sit amet, consectetur...
 ```
-
 
 
 Requirements
