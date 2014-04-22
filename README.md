@@ -45,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur...
 Requirements
 ---------
 
-PHP 4 (>= 4.0.6) & PHP 5
+PHP 4 (>= 4.0.6) or PHP 5
 
 
 Contributing
