@@ -45,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur...
 Requirements
 ---------
 
-PHP 4 (>= 4.0.6) or PHP 5
+PHP 4 (>= 4.0.6) or PHP 5 (minimal version)
 
 
 Contributing
@@ -57,7 +57,7 @@ All any issues or pull requests must be submitted through GitHub.
 * To make a pull request, please create a new branch for each feature or issue.
 
 
-Changelog
+ChangeLog
 ---------
 
 * 2014-04-08 - First commit
