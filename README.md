@@ -30,7 +30,7 @@ echo mb_substr($example, 0, 45) . '...';
 echo "\n\n";
 
 # With SmartSubtr
-echo smartSubstr($example, 45) . '...';
+echo smartSubstr($example, 45);
 ```
 
 This above example will output :
@@ -45,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur...
 Requirements
 ---------
 
-PHP 4 (>= 4.0.6) or PHP 5 (minimal version)
+PHP 4 (>= 4.0.6) or PHP 5 (>= 5.0.0)
 
 
 Contributing
