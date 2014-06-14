@@ -26,8 +26,8 @@ function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
             $totalLength = mb_strlen($returnStr);
 
             if (($totalLength + $itemLength) >= $maxLength) {
-                if (substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
-                    $returnStr = substr($returnStr, 0, -$separatorLength);
+                if (mb_substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
+                    $returnStr = mb_substr($returnStr, 0, -$separatorLength);
                 }
 
                 $returnStr .= $tail;
