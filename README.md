@@ -51,7 +51,7 @@ PHP 4 (>= 4.0.6) or PHP 5 (>= 5.0.0)
 Contributing
 ---------
 
-All any issues or pull requests must be submitted through GitHub.
+All issues or pull requests must be submitted through GitHub.
 
 * To report an issue or a feature request, please use [GitHub Issues](https://github.com/Pagawa/SmartSubstr/issues).
 * To make a pull request, please create a new branch for each feature or issue.
