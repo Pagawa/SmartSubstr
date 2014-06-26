@@ -19,25 +19,25 @@ function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
     $separatorLength = mb_strlen($separator);
     $explodeStr = explode($separator, $str);
 
-    if (count($explodeStr) > 1) {
-        foreach($explodeStr as $item) {
+    if (count($explodeStr) <= 1) {
+        return mb_substr($str, 0, $maxLength);
+    }
+    
+    foreach($explodeStr as $item) {
 
-            $itemLength = mb_strlen($item);
-            $totalLength = mb_strlen($returnStr);
+        $itemLength = mb_strlen($item);
+        $totalLength = mb_strlen($returnStr);
 
-            if (($totalLength + $itemLength) >= $maxLength) {
-                if (mb_substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
-                    $returnStr = mb_substr($returnStr, 0, -$separatorLength);
-                }
-
-                $returnStr .= $tail;
-                break;
+        if (($totalLength + $itemLength) >= $maxLength) {
+            if (mb_substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
+                $returnStr = mb_substr($returnStr, 0, -$separatorLength);
             }
 
-            $returnStr .= $item . $separator;
+            $returnStr .= $tail;
+            break;
         }
-    } else {
-        return mb_substr($str, 0, $maxLength);
+
+        $returnStr .= $item . $separator;
     }
 
     return $returnStr;
