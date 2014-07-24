@@ -8,7 +8,7 @@
  * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
  */
 
-function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
+function smartSubstr($str, $maxLength, $separator = ' ', $tail = '…')
 {
     if (mb_strlen($str) <= $maxLength) {
         return $str;
