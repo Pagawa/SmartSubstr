@@ -11,7 +11,7 @@ The function has 4 parameters :
 * $str (required) : The input string.
 * $maxLength (required) : Maximum number of characters that will be returned.
 * $separator (optional, default value is " " / space) : The boundary string.
-* $tail (optional, default value is "...") : If $maxLength is reached, this string will be added after the result.
+* $tail (optional, default value is "…") : If $maxLength is reached, this string will be added after the result.
 
 
 Quick Example
@@ -25,7 +25,7 @@ require 'Pagawa/SmartSubstr/smartSubstr.php';
 $example = "Lorem ipsum dolor sit amet, consectetur adipisicing";
 
 # Without SmartSubstr
-echo mb_substr($example, 0, 45) . '...';
+echo mb_substr($example, 0, 45) . '…';
 
 echo "\n\n";
 
@@ -36,9 +36,9 @@ echo smartSubstr($example, 45);
 This above example will output :
 
 ```php
-Lorem ipsum dolor sit amet, consectetur adipi...
+Lorem ipsum dolor sit amet, consectetur adipi…
 
-Lorem ipsum dolor sit amet, consectetur...
+Lorem ipsum dolor sit amet, consectetur…
 ```
 
 

@@ -4,11 +4,11 @@
  *
  * Copyright 2014, Jonathan M. Piat
  * http://pgwjs.com - http://pagawa.com
- * 
+ *
  * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
  */
 
-function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
+function smartSubstr($str, $maxLength, $separator = ' ', $tail = '…')
 {
     if (mb_strlen($str) <= $maxLength) {
         return $str;
@@ -22,7 +22,7 @@ function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
     if (count($explodeStr) <= 1) {
         return mb_substr($str, 0, $maxLength);
     }
-    
+
     foreach($explodeStr as $item) {
 
         $itemLength = mb_strlen($item);
