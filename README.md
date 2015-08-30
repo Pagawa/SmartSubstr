@@ -60,4 +60,5 @@ All issues or pull requests must be submitted through GitHub.
 ChangeLog
 ---------
 
+* 2015-08-30 - Optimizing source code (Version 1.1)
 * 2014-04-08 - First commit
