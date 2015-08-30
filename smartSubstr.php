@@ -1,44 +1,21 @@
 <?php
 /**
- * SmartSubstr - Version 1.0
+ * SmartSubstr - Version 1.1
  *
  * Copyright 2014, Jonathan M. Piat
+ * Copyright 2015, François LASSERRE
  * http://pgwjs.com - http://pagawa.com
- * 
+ *
  * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
  */
 
-function smartSubstr($str, $maxLength, $separator = ' ', $tail = '...')
+function smartSubstr($str, $maxLength, $separator = ' ', $tail = '…')
 {
-    if (mb_strlen($str) <= $maxLength) {
-        return $str;
+    if (strlen($str)>$maxLength) {
+        $str = substr($str, 0, $maxLength);
+        $sp = strrpos($str, $separator);
+        $str = substr($str, 0, $sp).$tail;
     }
 
-    $returnStr = '';
-    $totalLength = 0;
-    $separatorLength = mb_strlen($separator);
-    $explodeStr = explode($separator, $str);
-
-    if (count($explodeStr) <= 1) {
-        return mb_substr($str, 0, $maxLength);
-    }
-    
-    foreach($explodeStr as $item) {
-
-        $itemLength = mb_strlen($item);
-        $totalLength = mb_strlen($returnStr);
-
-        if (($totalLength + $itemLength) >= $maxLength) {
-            if (mb_substr($returnStr, -$separatorLength, $separatorLength) == $separator) {
-                $returnStr = mb_substr($returnStr, 0, -$separatorLength);
-            }
-
-            $returnStr .= $tail;
-            break;
-        }
-
-        $returnStr .= $item . $separator;
-    }
-
-    return $returnStr;
+    return $str;
 }
